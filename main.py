@@ -6,8 +6,8 @@ app = Flask(__name__)
 
 # ── Your Meta credentials ──────────────────────────────────────────
 VERIFY_TOKEN = "my_verify_token_123"   # you can change this string to anything you like
-PHONE_NUMBER_ID = "966483603225755"
-ACCESS_TOKEN = "EAAVcZCZAhwmTsBRBFOdAXt0WlB4w0G1xIx6VU3e5ZCpLJZAuDfYCfoBbIQs2gts01UI8ZCJofYQhk0idjOGJB7HxLNjy0h9bgWeYFliTGqPjQ710E6hbRoACqGSM3i5Yw7W8xZComoyTdXB5bL3p2jcFXgYOJI9pUJn5p6ZBMoLDCZC7Q4AphWWZBm3VEItTFlqJCjkTPRhLESccC3oa5YNONKWBZAAwEXF3FHGRDBceA98icE23Sg1HJSkoGL0ZBtmsN3z8r5h2jZCen9XaFljZCVpMqgAZDZD"
+PHONE_NUMBER_ID = os.environ.get("PHONE_NUMBER_ID")
+ACCESS_TOKEN = os.environ.get("ACCESS_TOKEN")
 # ──────────────────────────────────────────────────────────────────
 
 def send_whatsapp_message(to, message):
