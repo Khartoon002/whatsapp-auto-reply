@@ -63,12 +63,3 @@ def receive_message():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
-```
-
----
-
-**Now create a second file called `requirements.txt`** and paste this into it:
-```
-flask
-requests
-gunicorn
